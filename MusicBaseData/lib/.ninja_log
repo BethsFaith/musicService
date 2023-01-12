@@ -1,0 +1,27 @@
+# ninja log v5
+76	10843	6948786668070263	CMakeFiles/MusicBaseData.dir/General/DBWorker.cpp.obj	4b84b1ec28dde98d
+17423	18831	6948786748057967	libMusicBaseData.a	7dbdcce51f89044e
+38	11107	6948786670730110	CMakeFiles/MusicBaseData.dir/Objects/Song.cpp.obj	166b3cb065c3ca0f
+150	11809	6948786677720137	CMakeFiles/MusicBaseData.dir/Persons/Performer.cpp.obj	61c35daa798e4c8c
+17	11782	6948786677490108	CMakeFiles/MusicBaseData.dir/General/DataBase.cpp.obj	9a20ce124967b891
+108	11985	6948786679520407	CMakeFiles/MusicBaseData.dir/Objects/Album.cpp.obj	64b13ec0126bbe5f
+189	11589	6948786675510117	CMakeFiles/MusicBaseData.dir/Persons/User.cpp.obj	a8456354212224b9
+54	11724	6948786676870118	CMakeFiles/MusicBaseData.dir/Objects/Playlist.cpp.obj	269c539cb7ae2e95
+10844	17422	6948786733917487	CMakeFiles/MusicBaseData.dir/Objects/UserLibrary.cpp.obj	d1810e58bf0b2ae3
+331	12710	6948786686776952	CMakeFiles/MusicBaseData.dir/Objects/SharedLibrary.cpp.obj	6a379d8a50dbf31d
+387	11833	6948786678000121	CMakeFiles/MusicBaseData.dir/Objects/Category.cpp.obj	6fb4710fcac7b375
+1	1294	6948795429822473	build.ninja	9fa9e4dc17cebc3f
+0	28	0	clean	65f98da0b35f6796
+17884	21711	6933687400025127	Example.exe	a852d187a10709aa
+0	85	0	clean	65f98da0b35f6796
+31	8121	6948795590158965	CMakeFiles/MusicBaseData.dir/General/DBWorker.cpp.obj	4b84b1ec28dde98d
+58	8666	6948795595214534	CMakeFiles/MusicBaseData.dir/Objects/Song.cpp.obj	166b3cb065c3ca0f
+109	8936	6948795598289878	CMakeFiles/MusicBaseData.dir/Persons/User.cpp.obj	a8456354212224b9
+20	9129	6948795600244728	CMakeFiles/MusicBaseData.dir/General/DataBase.cpp.obj	9a20ce124967b891
+7	9299	6948795601950427	CMakeFiles/MusicBaseData.dir/Objects/Playlist.cpp.obj	269c539cb7ae2e95
+85	9333	6948795602270621	CMakeFiles/MusicBaseData.dir/Objects/Album.cpp.obj	64b13ec0126bbe5f
+44	9490	6948795603850534	CMakeFiles/MusicBaseData.dir/Persons/Performer.cpp.obj	61c35daa798e4c8c
+70	9646	6948795605400414	CMakeFiles/MusicBaseData.dir/Objects/UserLibrary.cpp.obj	d1810e58bf0b2ae3
+150	10096	6948795609937335	CMakeFiles/MusicBaseData.dir/Objects/SharedLibrary.cpp.obj	6a379d8a50dbf31d
+8122	13334	6948795642314396	CMakeFiles/MusicBaseData.dir/Objects/Category.cpp.obj	6fb4710fcac7b375
+13335	14335	6948795652407011	libMusicBaseData.a	7dbdcce51f89044e

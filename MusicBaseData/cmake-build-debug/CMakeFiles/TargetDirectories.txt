@@ -1,0 +1,3 @@
+D:/studentsStuff/Session/3_course/MusicService/MusicBaseData/cmake-build-debug/CMakeFiles/MusicBaseData.dir
+D:/studentsStuff/Session/3_course/MusicService/MusicBaseData/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/studentsStuff/Session/3_course/MusicService/MusicBaseData/cmake-build-debug/CMakeFiles/rebuild_cache.dir
