@@ -1,4 +1,4 @@
-ToolSet: w64 11.0 (local)@D:\soft\msys64\mingw64
-Options: 
+ToolSet: 16.0 (local)@D:\VisualStudio19
+Options: msvc.arch=x86_amd64
 
-Options:-DCMAKE_MAKE_PROGRAM=D:/JetBrains/CLion2022.2/bin/ninja/win/ninja.exe
+Options:-DCMAKE_MAKE_PROGRAM=D:/JetBrains/Clion2023/CLion2023.1.1/bin/ninja/win/x64/ninja.exe
