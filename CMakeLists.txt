@@ -30,7 +30,6 @@ add_executable(MusicService src/main.cpp
         src/base/basemodel.h
         src/common/navigator.h src/common/navigator.cpp
         src/common/mainwindow.h src/common/mainwindow.cpp
-        stylecontainer.h
         src/models/usermodel.h src/models/usermodel.cpp
         src/models/performermodel.h src/models/performermodel.cpp
         src/models/databasemodel.h src/models/databasemodel.cpp
