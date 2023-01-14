@@ -9,26 +9,31 @@
 #include "Playlist.h"
 #include "Song.h"
 
-class Category : public DBWorker
+class Category: public DBWorker
 {
 public:
-    Category(const std::string& name, const std::string& coverArt, Poco::SharedPtr<DataBase> dataBase);
-    Category(int id,Poco::SharedPtr<DataBase> dataBase);
+    Category(const std::string &name, const std::string &coverArt, Poco::SharedPtr <DataBase> dataBase);
+
+    Category(int id, Poco::SharedPtr <DataBase> dataBase);
 
     void addPlaylist(int playlistId);
+
     void removePlaylist(int playlistId);
 
     std::string getName();
+
     std::string getCoverArt();
 
-    std::vector<Playlist> getPlaylists();
+    std::vector <Playlist> getPlaylists();
 
-    void setName(const std::string& name);
-    void setCoverArt(const std::string& coverArt);
+    void setName(const std::string &name);
 
-    Poco::SharedPtr<DataBase> getDB();
+    void setCoverArt(const std::string &coverArt);
+
+    Poco::SharedPtr <DataBase> getDB();
+
 protected:
-    Poco::SharedPtr<DataBase> m_dataBase;
+    Poco::SharedPtr <DataBase> m_dataBase;
     const std::string NAME_TABLE = TABLES::Categories;
 
 private:

@@ -2,27 +2,31 @@
 #define SPLASHFRAGMENT_H
 
 #include <QShortcut>
+#include <QPointer>
 
 #include "../base/basefragment.h"
 
-namespace Ui {
-class SplashFragment;
+namespace Ui
+{
+    class SplashFragment;
 }
 
-class SplashFragment : public BaseFragment
+class SplashFragment: public BaseFragment
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-  explicit SplashFragment(QWidget *parent = nullptr);
-  ~SplashFragment();
+public:
+    explicit SplashFragment(QWidget *parent = nullptr);
 
-private slots:
-  void slide();
+    ~SplashFragment();
+
+private
+slots:
+    void slide();
 private:
-  Ui::SplashFragment *ui;
+    Ui::SplashFragment *ui;
 
-  QShortcut *keySpace;
+    QShortcut *keySpace;
 };
 
 #endif // SPLASHFRAGMENT_H

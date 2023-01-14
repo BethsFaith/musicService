@@ -2,11 +2,12 @@
 #define BASEMODEL_H
 
 
-class BaseModel {
+class BaseModel
+{
 public:
-  BaseModel();
-  virtual ~BaseModel();
-//  virtual void pol();
+    BaseModel() = default;
+
+    virtual ~BaseModel() = default;
 };
 
 #endif // BASEMODEL_H

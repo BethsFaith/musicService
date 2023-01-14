@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>UserPlaylists</class>
- <widget class="QFrame" name="UserPlaylists">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1500</width>
-    <height>740</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>Frame</string>
-  </property>
-  <widget class="QScrollArea" name="scrollArea">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>80</y>
-     <width>641</width>
-     <height>641</height>
-    </rect>
-   </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="scrollAreaWidgetContents">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>639</width>
-      <height>639</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QPushButton" name="pb_create">
-   <property name="geometry">
-    <rect>
-     <x>1130</x>
-     <y>20</y>
-     <width>131</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>MelodBold</family>
-     <pointsize>18</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Создать</string>
-   </property>
-  </widget>
- </widget>
- <resources/>
- <connections/>
+    <class>UserPlaylists</class>
+    <widget class="QFrame" name="UserPlaylists">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1500</width>
+                <height>740</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Frame</string>
+        </property>
+        <widget class="QScrollArea" name="scrollArea">
+            <property name="geometry">
+                <rect>
+                    <x>420</x>
+                    <y>80</y>
+                    <width>641</width>
+                    <height>641</height>
+                </rect>
+            </property>
+            <property name="widgetResizable">
+                <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>639</width>
+                        <height>639</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QPushButton" name="pb_create">
+            <property name="geometry">
+                <rect>
+                    <x>1130</x>
+                    <y>20</y>
+                    <width>131</width>
+                    <height>41</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>MelodBold</family>
+                    <pointsize>18</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Создать</string>
+            </property>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>

@@ -5,34 +5,38 @@
 #include <Poco/SharedPtr.h>
 #include <QVBoxLayout>
 #include "../models/usermodel.h"
-#include "../buttons/categorypb.h"
+#include "../buttons/playlistpb.h"
 
-namespace Ui {
-class PlaylistsForm;
+namespace Ui
+{
+    class PlaylistsForm;
 }
 
-class PlaylistsForm : public QWidget
+class PlaylistsForm: public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-      public:
-               explicit PlaylistsForm(QWidget *parent = nullptr);
-  ~PlaylistsForm();
+public:
+    explicit PlaylistsForm(QWidget *parent = nullptr);
 
-  void setUser(Poco::SharedPtr<UserModel>);
-  void setIdSong(int id);
-  void showWindow();
+    ~PlaylistsForm();
 
-//signals:
-//  void playlistClicked(Poco::SharedPtr<Playlist> playlist);
-private slots:
-  void on_playlist_clicked();
+    void setUser(Poco::SharedPtr <UserModel>);
+
+    void setIdSong(int id);
+
+    void showWindow();
+
+private
+    slots:
+            void on_playlist_clicked();
 
 private:
-  Ui::PlaylistsForm *ui;
-  Poco::SharedPtr<UserModel> m_user;
-  int m_songId;
-  std::vector<CategoryPB*> m_playlists;
+    Ui::PlaylistsForm *ui;
+    Poco::SharedPtr <UserModel> m_user;
+    int m_songId;
+
+    std::vector<PlaylistPB *> m_playlists;
 };
 
 #endif // PLAYLISTSFORM_H

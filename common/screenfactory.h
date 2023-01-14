@@ -1,5 +1,6 @@
 #ifndef SCREENFACTORY_H
 #define SCREENFACTORY_H
+
 #include "../base/basescreensfactory.h"
 #include "../fragments/loginfragment.h"
 #include "../fragments/registrfragment.h"
@@ -13,7 +14,6 @@
 #include "../fragments/playlistfragment.h"
 #include "../fragments/albumfragment.h"
 #include "../fragments/performerfragment.h"
-#include "../fragments/songfragment.h"
 #include "../fragments/userfragment.h"
 #include "../fragments/userfavourites.h"
 #include "../fragments/userplaylists.h"
@@ -21,17 +21,21 @@
 #include "../fragments/createplaylistfragment.h"
 #include "../fragments/genrefragment.h"
 #include "../fragments/performertoolsfragment.h"
+#include "../fragments/createalbumfragment.h"
 
-class ScreensFactory: public BaseScreensFactory {
+class ScreensFactory: public BaseScreensFactory
+{
 public:
-  ScreensFactory(QString start_tag = screens::SPLASH_TAG);
-  virtual ~ScreensFactory();
+    ScreensFactory(QString start_tag = screens::SPLASH_TAG);
 
-  BaseFragment* create(QString tag) override;
-  QString createStart() override;
+    virtual ~ScreensFactory() = default;
+
+    BaseFragment *create(QString tag) override;
+
+    QString createStart() override;
 
 private:
-  QString m_startTag;
+    QString m_startTag;
 };
 
 #endif // SCREENFACTORY_H

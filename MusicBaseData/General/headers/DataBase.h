@@ -34,18 +34,18 @@ namespace TABLES
     static const std::string LikedAlbums{"likedAlbums"};
 }
 
-class DataBase : public DBWorker
+class DataBase: public DBWorker
 {
 public:
     DataBase();
 
     void insertUser(std::string login, std::string nickname, std::string pass, bool isModerator = false);
 
-    void insertPerformer(std::string login, std::string nickname,std::string pass);
+    void insertPerformer(std::string login, std::string nickname, std::string pass);
 
     void insertGenre(std::string name);
 
-    void insertSong(std::string name, std::string genreName, std::string albumName, std::string audio,
+    void insertSong(std::string name, std::string genreName, std::string albumName,
                     std::string performerName);
 
     void insertAlbum(std::string name, const std::string &performerName, std::string coverArt, bool isPublic = false);
@@ -73,18 +73,24 @@ public:
     int getCategoryId(std::string name);
 
     void deleteSong(int songId);
+
     void deleteAlbum(int albumId);
+
     void deleteUser(int userId);
+
     void deletePerformer(int userId);
+
     void deleteCategory(int categoryId);
+
     void deletePlaylist(int playlistId);
 
     bool checkUserPass(std::string login, std::string pass);
+
     bool checkPerformerPass(std::string login, std::string pass);
 
-    std::vector<std::string> getSongsByPerformer(std::string performerName);
+    std::vector <std::string> getSongsByPerformer(std::string performerName);
 
-    Poco::SharedPtr<Poco::Data::Session> getSession();
+    Poco::SharedPtr <Poco::Data::Session> getSession();
 };
 
 #endif //MUSICBASEDATA_DATABASE_H

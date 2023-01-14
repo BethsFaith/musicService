@@ -1,6 +1,8 @@
 #ifndef STARTFRAGMENT_H
 #define STARTFRAGMENT_H
 
+#include <QPointer>
+
 #include "../base/basefragment.h"
 #include <Poco/SharedPtr.h>
 #include "../models/databasemodel.h"
@@ -8,37 +10,38 @@
 #include "../common/screenfactory.h"
 #include "../common/navigator.h"
 
-namespace Ui {
-class StartFragment;
+namespace Ui
+{
+    class StartFragment;
 }
 
-class StartFragment : public BaseFragment
+class StartFragment: public BaseFragment
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-explicit StartFragment(QWidget *parent = nullptr);
-  ~StartFragment();
+    explicit StartFragment(QWidget *parent = nullptr);
 
-void setData(Poco::SharedPtr<DBWorker> model) override;
+    ~StartFragment();
 
-private slots:
-   void on_pb_catalog_clicked();
+    void setData(Poco::SharedPtr <DBWorker> model) override;
 
-   void on_pb_search_clicked();
+private
+    slots:
+            void on_pb_catalog_clicked();
 
-   void on_pb_log_clicked();
+    void on_pb_log_clicked();
 
-   void on_pb_reg_clicked();
+    void on_pb_reg_clicked();
 
-   void on_pb_seacrh_clicked();
+    void on_pb_seacrh_clicked();
 
- private:
-  Ui::StartFragment *ui;
-  Poco::SharedPtr<DataBase> m_bm;
-  QStackedWidget *container;
-  BaseScreensFactory *factory;
-  Navigator *navigator;
+private:
+    Ui::StartFragment *ui;
+    Poco::SharedPtr <DataBase> m_bm;
+    QStackedWidget *container;
+    BaseScreensFactory *factory;
+    Navigator *navigator;
 };
 
 #endif // STARTFRAGMENT_H

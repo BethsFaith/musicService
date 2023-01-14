@@ -4,24 +4,28 @@
 #include <QWidget>
 #include <QPushButton>
 
-namespace Ui {
-class playlistPB;
-}
+#include "../base/basepicturepb.h"
+#include "../MusicBaseData/Objects/headers/Playlist.h"
 
-class playlistPB : public QWidget
+class PlaylistPB: public BasePicturePB
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-  explicit playlistPB(QWidget *parent = nullptr);
-  ~playlistPB();
+public:
+    explicit PlaylistPB(Playlist &playlist, BaseFragment *fragment, Poco::SharedPtr <BaseModel> m_user = nullptr,
+                        QWidget *parent = nullptr);
 
-  QPushButton* getPB();
-  std::string getName();
-  void setName(const std::string &name);
+    ~PlaylistPB() = default;
+
+    Playlist &getPlaylist();
+
+public slots:
+    void onClicked();
+
 private:
-  Ui::playlistPB *ui;
-  std::string m_name;
+    Playlist m_playlist;
+    Poco::SharedPtr <BaseModel> m_user;
+    BaseFragment *m_fragment;
 };
 
 #endif // PLAYLISTPB_H

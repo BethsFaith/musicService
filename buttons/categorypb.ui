@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CategoryBP</class>
- <widget class="QWidget" name="CategoryBP">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>300</width>
-    <height>250</height>
-   </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>300</width>
-    <height>250</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>300</width>
-    <height>250</height>
-   </size>
-  </property>
-  <property name="windowTitle">
-   <string>Form</string>
-  </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>302</width>
-     <height>251</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <property name="sizeConstraint">
-     <enum>QLayout::SetFixedSize</enum>
-    </property>
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="minimumSize">
-       <size>
-        <width>300</width>
-        <height>210</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>300</width>
-        <height>210</height>
-       </size>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="l_name">
-      <property name="minimumSize">
-       <size>
-        <width>300</width>
-        <height>40</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>300</width>
-        <height>40</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>MelodBold</family>
-        <pointsize>12</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
- </widget>
- <resources/>
- <connections/>
+    <class>CategoryPB</class>
+    <widget class="QWidget" name="CategoryPB">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>300</width>
+                <height>250</height>
+            </rect>
+        </property>
+        <property name="minimumSize">
+            <size>
+                <width>300</width>
+                <height>250</height>
+            </size>
+        </property>
+        <property name="maximumSize">
+            <size>
+                <width>300</width>
+                <height>250</height>
+            </size>
+        </property>
+        <property name="windowTitle">
+            <string>Form</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>302</width>
+                    <height>258</height>
+                </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="sizeConstraint">
+                    <enum>QLayout::SetFixedSize</enum>
+                </property>
+                <item>
+                    <widget class="QPushButton" name="pushButton">
+                        <property name="minimumSize">
+                            <size>
+                                <width>300</width>
+                                <height>210</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>300</width>
+                                <height>210</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string/>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="l_name">
+                        <property name="minimumSize">
+                            <size>
+                                <width>300</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>300</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <family>MelodBold</family>
+                                <pointsize>12</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string/>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>

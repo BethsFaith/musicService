@@ -5,61 +5,59 @@
 #include <QPushButton>
 #include <QMenu>
 #include <Poco/SharedPtr.h>
+
+#include "../base/basefragment.h"
+#include "../models/usermodel.h"
+#include "../models/performermodel.h"
 #include "../MusicBaseData/Objects/headers/Song.h"
 
-namespace Ui {
-class SongPB;
+namespace Ui
+{
+    class SongPB;
 }
 
-class SongPB : public QWidget
+class SongPB: public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  explicit SongPB(Poco::SharedPtr<Song> _song, QWidget *parent = nullptr);
-  ~SongPB();
+    explicit SongPB(Song &song, BaseFragment *, Poco::SharedPtr <BaseModel> m_user = nullptr,
+                    QWidget *parent = nullptr);
 
-  QPushButton* getNameB();
-  QPushButton *getPerfB();
-  QPushButton* getLikeB();
-  const std::string &getName() const;
-  void setName(const std::string &newName);
-  Poco::SharedPtr<QMenu> getMenu();
-  void setActionToMenu(QAction* action);
-  void removeAction(QAction* action);
-  void clearMenu();
+    ~SongPB();
 
-  const std::string &getPerformer() const;
-  void setPerformer(const std::string &newPerformer);
+    QPushButton *getNameB();
 
-  int id;
+    QPushButton *getPerfB();
 
-  const Poco::SharedPtr<Song> &getSong() const;
-  void setSong(const Poco::SharedPtr<Song> &newSong);
+    QPushButton *getLikeB();
 
-signals:
-  void clickedPerfomance();
+    Poco::SharedPtr <QMenu> getMenu();
 
-  void clickedName();
+    void setActionToMenu(QAction *action);
 
-  void clickedLike();
+    void removeAction(QAction *action);
+
+    void clearMenu();
+
+    const Song &getSong() const;
 
 private slots:
-  void on_pb_perf_clicked();
+    void on_pb_perf_clicked();
 
-  void on_pb_name_clicked();
+    void on_pb_name_clicked();
 
-  void on_pb_like_clicked();
+    void on_pb_like_clicked();
 
-  void on_pb_add_clicked();
+    void on_pb_add_clicked();
 
 private:
-  Ui::SongPB *ui;
+    Ui::SongPB *ui;
 
-  std::string name;
-  std::string performer;
-  Poco::SharedPtr<QMenu> menu;
-  Poco::SharedPtr<Song> song;
+    Poco::SharedPtr <QMenu> menu;
+    Song song;
+    Poco::SharedPtr <BaseModel> m_user;
+    BaseFragment *m_fragment;
 };
 
 #endif // SONGPB_H

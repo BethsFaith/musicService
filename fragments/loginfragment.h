@@ -6,27 +6,31 @@
 #include "../models/usermodel.h"
 #include "../models/performermodel.h"
 
-namespace Ui {
-class LoginFragment;
+namespace Ui
+{
+    class LoginFragment;
 }
 
-class LoginFragment : public BaseFragment
+class LoginFragment: public BaseFragment
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  explicit LoginFragment(QWidget *parent = nullptr);
-  ~LoginFragment();
+    explicit LoginFragment(QWidget *parent = nullptr);
 
-  void setData(Poco::SharedPtr<DBWorker> model) override;
-private slots:
-  void on_pushButton_clicked();
+    ~LoginFragment();
 
-  void on_pushButton_2_clicked();
+    void setData(Poco::SharedPtr <DBWorker> model) override;
+
+private
+    slots:
+            void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
-  Ui::LoginFragment *ui;
-  Poco::SharedPtr<DataBase> m_bm;
+    Ui::LoginFragment *ui;
+    Poco::SharedPtr <DataBase> m_bm;
 };
 
 #endif // LOGINFRAGMENT_H

@@ -1,38 +1,34 @@
-#ifndef CATEGORYBP_H
-#define CATEGORYBP_H
+#ifndef PICTUREBP_H
+#define PICTUREBP_H
 
 #include <QWidget>
 #include <QPushButton>
 
-namespace Ui {
-class CategoryBP;
-}
+#include "../base/basepicturepb.h"
+#include "../MusicBaseData/Objects/headers/Category.h"
 
-class CategoryPB : public QWidget
+class CategoryPB: public BasePicturePB
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-   explicit CategoryPB(QWidget *parent = nullptr);
-  ~CategoryPB();
+    explicit CategoryPB(Category &category, BaseFragment *fragment, Poco::SharedPtr <BaseModel> m_user = nullptr,
+                        QWidget *parent = nullptr);
 
-   QPushButton* getPB();
-   std::string getName();
-   std::string getCreatorName();
-   void setName(const std::string &name);
-   void setCreator(const std::string &name);
+    explicit CategoryPB(Category &category, Poco::SharedPtr <BaseModel> m_user = nullptr, QWidget *parent = nullptr);
 
-signals:
-  void clicked();
-public slots:
-  void onClicked();
-private slots:
-  void on_pushButton_clicked();
+    ~CategoryPB();
+
+    const Category &category();
+
+public
+    slots:
+            void onClicked();
 
 private:
-  Ui::CategoryBP *ui;
-  std::string m_name;
-  std::string m_creatorName;
+    Category m_category;
+    Poco::SharedPtr <BaseModel> m_user;
+    BaseFragment *m_fragment;
 };
 
-#endif // CATEGORYBP_H
+#endif // PICTUREBP_H

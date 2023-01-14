@@ -5,25 +5,28 @@
 #include "../models/usermodel.h"
 #include "../forms/playlistsform.h"
 
-class addSongToPlaylist : public QAction
+class addSongToPlaylist: public QAction
 {
 public:
-  explicit addSongToPlaylist(QString string, QObject *parent = nullptr);
-  virtual ~addSongToPlaylist();
+    explicit addSongToPlaylist(QString string, QObject *parent = nullptr);
 
-  Poco::SharedPtr<UserModel> user();
-  void setUser(Poco::SharedPtr<UserModel> newUser);
+    virtual ~addSongToPlaylist() = default;
 
-  int idSong();
-  void setIdSong(int newIdSong);
+    Poco::SharedPtr <UserModel> user();
+
+    void setUser(Poco::SharedPtr <UserModel> newUser);
+
+    int idSong();
+
+    void setIdSong(int newIdSong);
 
 public slots:
-  void action();
+    void action();
 
 private:
-  Poco::SharedPtr<UserModel> m_user;
-  int m_idSong;
-  Poco::SharedPtr<PlaylistsForm> m_plForm;
+    Poco::SharedPtr <UserModel> m_user;
+    int m_idSong;
+    Poco::SharedPtr <PlaylistsForm> m_plForm;
 };
 
 #endif // ADDSONGTOPLAYLIST_H

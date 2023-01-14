@@ -4,17 +4,17 @@
 
 #include "headers/UserLibrary.h"
 
-UserLibrary::UserLibrary(int userId, Poco::SharedPtr<DataBase> dataBase) : m_userId{userId}, m_dataBase{dataBase}, DBWorker(dataBase->getSession())
-{
+UserLibrary::UserLibrary(int userId, Poco::SharedPtr <DataBase> dataBase) : m_userId{userId}, m_dataBase{dataBase},
+                                                                            DBWorker(dataBase->getSession()) {
 }
 
-std::vector<Playlist> UserLibrary::getPlaylists()
-{
-    std::vector<Playlist> playlists;
+std::vector <Playlist> UserLibrary::getPlaylists() {
+    std::vector <Playlist> playlists;
 
     bool isLiked = true;
 
-    std::vector<int> id; std::vector<std::string> name, nameUsers;
+    std::vector<int> id;
+    std::vector <std::string> name, nameUsers;
     Poco::Data::Statement get(*m_session);
     get << "SELECT playlists.name, users.nickname FROM playlists "
            "JOIN likedPlaylists ON likedPlaylists.playlist_id = playlists.id "
@@ -32,14 +32,14 @@ std::vector<Playlist> UserLibrary::getPlaylists()
     return playlists;
 }
 
-std::vector<Song> UserLibrary::getSongs()
-{
-    std::vector<Song> songs;
+std::vector <Song> UserLibrary::getSongs() {
+    std::vector <Song> songs;
     bool isLiked = true;
 
-    std::vector<int> id; std::vector<std::string> name, performers, albums, audio;
+    std::vector<int> id;
+    std::vector <std::string> name, performers, albums;
     Poco::Data::Statement get(*m_session);
-    get << "SELECT songs.id, songs.name, performers.nickname, albums.name, songs.audio FROM songs "
+    get << "SELECT songs.id, songs.name, performers.nickname, albums.name FROM songs "
            "JOIN likedSongs ON likedSongs.song_id = songs.id "
            "JOIN albums ON albums.id = songs.album_id "
            "JOIN performers ON performers.id = songs.performer_id "
@@ -49,22 +49,20 @@ std::vector<Song> UserLibrary::getSongs()
             into(id),
             into(name),
             into(performers),
-            into(albums),
-            into(audio);
+            into(albums);
     get.execute();
 
     for (int i{}; i < id.size(); ++i)
-         songs.emplace_back(id[i], name[i], performers[i], albums[i], audio[i], m_dataBase);
+        songs.emplace_back(id[i], name[i], performers[i], albums[i], m_dataBase);
 
     return songs;
 }
 
-std::vector<Performer> UserLibrary::getPerformers()
-{
-    std::vector<Performer> performers;
+std::vector <Performer> UserLibrary::getPerformers() {
+    std::vector <Performer> performers;
     bool isLiked = true;
 
-    std::vector<std::string> name;
+    std::vector <std::string> name;
     Poco::Data::Statement get(*m_session);
     get << "SELECT performers.nickname FROM performers "
            "JOIN likedPerformers ON likedPerformers.performer_id = performers.id "
@@ -80,13 +78,12 @@ std::vector<Performer> UserLibrary::getPerformers()
     return performers;
 }
 
-std::vector<Album> UserLibrary::getAlbums()
-{
-    std::vector<Album> albums;
+std::vector <Album> UserLibrary::getAlbums() {
+    std::vector <Album> albums;
 
     bool isLiked = true;
 
-    std::vector<std::string> name, namePerformers;
+    std::vector <std::string> name, namePerformers;
     Poco::Data::Statement get(*m_session);
     get << "SELECT albums.name, performers.nickname FROM albums "
            "JOIN likedAlbums ON likedAlbums.Album_id = albums.id "
@@ -95,8 +92,8 @@ std::vector<Album> UserLibrary::getAlbums()
             use(m_userId),
             use(isLiked),
             into(name),
-        into(namePerformers);
-   get.execute();
+            into(namePerformers);
+    get.execute();
 
     for (int i{}; i < name.size(); ++i)
         albums.emplace_back(name[i], namePerformers[i], m_dataBase);
@@ -104,13 +101,12 @@ std::vector<Album> UserLibrary::getAlbums()
     return albums;
 }
 
-std::vector<Playlist> UserLibrary::getOwnPlaylists()
-{
-    std::vector<Playlist> playlists;
+std::vector <Playlist> UserLibrary::getOwnPlaylists() {
+    std::vector <Playlist> playlists;
 
     bool isLiked = true;
 
-    std::vector<std::string> name;
+    std::vector <std::string> name;
     Poco::Data::Statement get(*m_session);
     get << "SELECT playlists.name FROM playlists "
            "JOIN Users ON playlists.user_id = users.id "
@@ -120,7 +116,7 @@ std::vector<Playlist> UserLibrary::getOwnPlaylists()
     get.execute();
 
     std::string nameUser;
-    selectById<std::string > ("nickname", TABLES::Users, m_userId, nameUser);
+    selectById<std::string>("nickname", TABLES::Users, m_userId, nameUser);
     for (int i{}; i < name.size(); ++i)
         playlists.emplace_back(nameUser, name[i], m_dataBase);
 

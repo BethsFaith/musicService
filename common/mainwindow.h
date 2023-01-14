@@ -6,16 +6,18 @@
 #include "screenfactory.h"
 #include "navigator.h"
 
-class MainWindow : public QMainWindow
+class MainWindow: public QMainWindow
 {
-  Q_OBJECT  
+    Q_OBJECT
 public:
-  MainWindow(QWidget *parent = nullptr);
-  ~MainWindow();
+    MainWindow(QWidget *parent = nullptr);
+
+    ~MainWindow();
+
 private:
-  QStackedWidget *container;
-  Navigator *navigator;
-  BaseScreensFactory *factory;
+    QStackedWidget *container;
+    Navigator *navigator;
+    BaseScreensFactory *factory;
 };
 
 #endif // MAINWINDOW_H

@@ -12,27 +12,34 @@
 #include "Category.h"
 #include "../../Persons/headers/Performer.h"
 #include "../../Persons/headers/User.h"
-#include "genre.h"
+#include "Genre.h"
 
-class SharedLibrary : DBWorker
+class SharedLibrary: DBWorker
 {
 public:
-    SharedLibrary(Poco::SharedPtr<DataBase> dataBase);
+    SharedLibrary(Poco::SharedPtr <DataBase> dataBase);
 
-    std::vector<Song> getAllSongs();
-    std::vector<Album> getAllAlbums();
-    std::vector<Performer> getAllPerformers();
-    std::vector<Playlist> getAllPlaylists();
-    std::vector<User> getAllUsers();
-    std::vector<Category> getAllCategories();
+    std::vector <Song> getAllSongs();
+
+    std::vector <Album> getAllAlbums();
+
+    std::vector <Performer> getAllPerformers();
+
+    std::vector <Playlist> getAllPlaylists();
+
+    std::vector <User> getAllUsers();
+
+    std::vector <Category> getAllCategories();
 
 //    std::vector<Song> getSongsByGenre(int genreId);
-    std::vector<Genre> getAllGenres();
-    const Poco::SharedPtr<DataBase> &dataBase() const;
-    void setDataBase(const Poco::SharedPtr<DataBase> &newDataBase);
+    std::vector <Genre> getAllGenres();
 
-  private:
-    Poco::SharedPtr<DataBase> m_dataBase;
+    const Poco::SharedPtr <DataBase> &dataBase() const;
+
+    void setDataBase(const Poco::SharedPtr <DataBase> &newDataBase);
+
+private:
+    Poco::SharedPtr <DataBase> m_dataBase;
 };
 
 

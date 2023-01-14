@@ -9,31 +9,36 @@
 #include "../../Objects/headers/Song.h"
 #include "../../Objects/headers/Album.h"
 
-class Performer : public DBWorker
+class Performer: public DBWorker
 {
 public:
-    Performer(const std::string nickname, Poco::SharedPtr<DataBase> dataBase);
-    Performer(int id, Poco::SharedPtr<DataBase> dataBase);
+    Performer(const std::string nickname, Poco::SharedPtr <DataBase> dataBase);
 
-    std::vector<Song> getSongs();
-    std::vector<Album> getAlbums();
+    Performer(int id, Poco::SharedPtr <DataBase> dataBase);
+
+    std::vector <Song> getSongs();
+
+    std::vector <Album> getAlbums();
 
     std::string getName();
 
     void addAlbum(std::string name, std::string coverArt);
+
     void removeAlbum(std::string name);
 
     void setNickname(std::string nickname);
+
     void setPassword(std::string pass);
 
-    const Poco::SharedPtr<DataBase> &dataBase() const;
-    void setDataBase(const Poco::SharedPtr<DataBase> &newDataBase);
+    Poco::SharedPtr <DataBase> dataBase();
 
-  private:
+    void setDataBase(Poco::SharedPtr <DataBase> newDataBase);
+
+private:
     std::string m_nickname;
     int m_id;
 
-    Poco::SharedPtr<DataBase> m_dataBase;
+    Poco::SharedPtr <DataBase> m_dataBase;
 
     const std::string NAME_TABLE = TABLES::Performers;
 };

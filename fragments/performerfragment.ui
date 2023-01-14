@@ -1,162 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PerformerFragment</class>
- <widget class="QFrame" name="PerformerFragment">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1504</width>
-    <height>750</height>
-   </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>1504</width>
-    <height>750</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>1504</width>
-    <height>750</height>
-   </size>
-  </property>
-  <property name="windowTitle">
-   <string>Frame</string>
-  </property>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1504</width>
-     <height>721</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QLabel" name="l_name">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>50</height>
-         </size>
+    <class>PerformerFragment</class>
+    <widget class="QFrame" name="PerformerFragment">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1505</width>
+                <height>750</height>
+            </rect>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>50</height>
-         </size>
+        <property name="windowTitle">
+            <string>Frame</string>
         </property>
-        <property name="font">
-         <font>
-          <family>Segoe UI</family>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QScrollArea" name="SA_Songs">
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>300</height>
-         </size>
-        </property>
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents_2">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>1498</width>
-           <height>297</height>
-          </rect>
-         </property>
+        <widget class="QWidget" name="horizontalLayoutWidget">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>1504</width>
+                    <height>724</height>
+                </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                    <layout class="QVBoxLayout" name="verticalLayout">
+                        <item>
+                            <widget class="QLabel" name="l_name">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>50</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>16777215</width>
+                                        <height>50</height>
+                                    </size>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <family>Segoe UI</family>
+                                        <pointsize>14</pointsize>
+                                        <weight>75</weight>
+                                        <bold>true</bold>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string/>
+                                </property>
+                                <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QScrollArea" name="SA_Songs">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>150</width>
+                                        <height>300</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>1500</width>
+                                        <height>300</height>
+                                    </size>
+                                </property>
+                                <property name="widgetResizable">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                </property>
+                                <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>0</x>
+                                            <y>0</y>
+                                            <width>1498</width>
+                                            <height>298</height>
+                                        </rect>
+                                    </property>
+                                </widget>
+                            </widget>
+                        </item>
+                        <item>
+                            <layout class="QHBoxLayout" name="horizontalLayout_3">
+                                <item>
+                                    <widget class="QLabel" name="l_albums">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>50</height>
+                                            </size>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>16777215</width>
+                                                <height>50</height>
+                                            </size>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <family>Segoe UI</family>
+                                                <pointsize>16</pointsize>
+                                                <weight>75</weight>
+                                                <bold>true</bold>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>Альбомы:</string>
+                                        </property>
+                                        <property name="alignment">
+                                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QPushButton" name="pb_createAlbum">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>200</width>
+                                                <height>50</height>
+                                            </size>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>200</width>
+                                                <height>50</height>
+                                            </size>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <family>Segoe UI Black</family>
+                                                <pointsize>14</pointsize>
+                                                <weight>75</weight>
+                                                <bold>true</bold>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>Создать альбом</string>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </item>
+                        <item>
+                            <widget class="QScrollArea" name="SA_albums">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>1500</width>
+                                        <height>300</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>1500</width>
+                                        <height>300</height>
+                                    </size>
+                                </property>
+                                <property name="widgetResizable">
+                                    <bool>true</bool>
+                                </property>
+                                <widget class="QWidget" name="scrollAreaWidgetContents">
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>0</x>
+                                            <y>0</y>
+                                            <width>1498</width>
+                                            <height>298</height>
+                                        </rect>
+                                    </property>
+                                </widget>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+            </layout>
         </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="l_albums">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>50</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>50</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>Segoe UI</family>
-          <pointsize>16</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>         Альбомы:</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QScrollArea" name="SA_albums">
-        <property name="minimumSize">
-         <size>
-          <width>1500</width>
-          <height>300</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>1500</width>
-          <height>300</height>
-         </size>
-        </property>
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>1498</width>
-           <height>298</height>
-          </rect>
-         </property>
-        </widget>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
- </widget>
- <resources/>
- <connections/>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>

@@ -1,134 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>UserLibraryFragment</class>
- <widget class="QFrame" name="UserLibraryFragment">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1501</width>
-    <height>741</height>
-   </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>1501</width>
-    <height>741</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>1501</width>
-    <height>741</height>
-   </size>
-  </property>
-  <property name="windowTitle">
-   <string>Frame</string>
-  </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>-30</x>
-     <y>0</y>
-     <width>1541</width>
-     <height>741</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>140</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>140</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>MelodBold</family>
-        <pointsize>18</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Ваша аудиотека</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QPushButton" name="pb_favourites">
+    <class>UserLibraryFragment</class>
+    <widget class="QFrame" name="UserLibraryFragment">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1501</width>
+                <height>741</height>
+            </rect>
+        </property>
         <property name="minimumSize">
-         <size>
-          <width>250</width>
-          <height>200</height>
-         </size>
+            <size>
+                <width>1501</width>
+                <height>741</height>
+            </size>
         </property>
         <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>16777215</height>
-         </size>
+            <size>
+                <width>1501</width>
+                <height>741</height>
+            </size>
         </property>
-        <property name="text">
-         <string>Избранное</string>
+        <property name="windowTitle">
+            <string>Frame</string>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pb_category">
-        <property name="minimumSize">
-         <size>
-          <width>250</width>
-          <height>200</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>250</width>
-          <height>200</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Категории</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pb_playlists">
-        <property name="minimumSize">
-         <size>
-          <width>250</width>
-          <height>200</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>250</width>
-          <height>200</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Плейлисты</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
- </widget>
- <resources/>
- <connections/>
+        <widget class="QWidget" name="verticalLayoutWidget">
+            <property name="geometry">
+                <rect>
+                    <x>-30</x>
+                    <y>0</y>
+                    <width>1541</width>
+                    <height>741</height>
+                </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QLabel" name="label">
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>140</height>
+                            </size>
+                        </property>
+                        <property name="maximumSize">
+                            <size>
+                                <width>16777215</width>
+                                <height>140</height>
+                            </size>
+                        </property>
+                        <property name="font">
+                            <font>
+                                <family>MelodBold</family>
+                                <pointsize>18</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                            </font>
+                        </property>
+                        <property name="text">
+                            <string>Ваша аудиотека</string>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                        <item>
+                            <widget class="QPushButton" name="pb_favourites">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>250</width>
+                                        <height>200</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>200</width>
+                                        <height>16777215</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Избранное</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="pb_category">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>250</width>
+                                        <height>200</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>250</width>
+                                        <height>200</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Категории</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="pb_playlists">
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>250</width>
+                                        <height>200</height>
+                                    </size>
+                                </property>
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>250</width>
+                                        <height>200</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Плейлисты</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>

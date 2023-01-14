@@ -1,52 +1,31 @@
 #include "categorypb.h"
-#include "ui_categorypb.h"
 
-CategoryPB::CategoryPB(QWidget *parent) :
-                                          QWidget(parent),
-                                          ui(new Ui::CategoryBP)
-{
-  ui->setupUi(this);
-  connect(ui->pushButton, &QPushButton::clicked, this, &CategoryPB::onClicked);
+CategoryPB::CategoryPB(Category &category, BaseFragment *fragment, Poco::SharedPtr <BaseModel> user, QWidget *parent) :
+        BasePicturePB(parent), m_category(category), m_fragment{fragment} {
+    connect(this, &BasePicturePB::clicked, this, &CategoryPB::onClicked);
+    setName(m_category.getName().c_str());
+    setPicture(m_category.getCoverArt().c_str());
 }
 
-CategoryPB::~CategoryPB()
-{
-  delete ui;
+CategoryPB::CategoryPB(Category &category, Poco::SharedPtr <BaseModel> user, QWidget *parent) : BasePicturePB(parent),
+                                                                                                m_category(category),
+                                                                                                m_user{user} {
+    connect(this, &BasePicturePB::clicked, this, &CategoryPB::onClicked);
+    setName(m_category.getName().c_str());
+    setPicture(m_category.getCoverArt().c_str());
 }
 
-QPushButton *CategoryPB::getPB()
-{
-  return ui->pushButton;
+CategoryPB::~CategoryPB() {
 }
 
-std::string CategoryPB::getName()
-{
-  return m_name;
+void CategoryPB::onClicked() {
+    if (m_user.isNull())
+        m_fragment->navigateWithData(screens::CATEGORY_TAG, Poco::makeShared<Category>(m_category));
+    else
+        m_fragment->navigateWithDataAndUser(screens::CATEGORY_TAG, Poco::makeShared<Category>(m_category), m_user);
 }
 
-std::string CategoryPB::getCreatorName()
-{
-  return m_creatorName;
-}
-
-void CategoryPB::setName(const std::string &name)
-{
-  m_name = name;
-  ui->l_name->setText(QString(name.c_str()));
-}
-
-void CategoryPB::setCreator(const std::string &name)
-{
-  m_creatorName = name;
-}
-
-void CategoryPB::onClicked()
-{
-  emit clicked();
-}
-
-void CategoryPB::on_pushButton_clicked()
-{
-   emit clicked();
+const Category &CategoryPB::category() {
+    return m_category;
 }
 

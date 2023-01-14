@@ -1,213 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AlbumFragment</class>
- <widget class="QFrame" name="AlbumFragment">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1500</width>
-    <height>750</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>Frame</string>
-  </property>
-  <widget class="QPushButton" name="pb_changeName">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>30</y>
-     <width>151</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Сохранить название</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pb_changeCover">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>30</y>
-     <width>151</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Изменить обложку</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="LE_name">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>130</y>
-     <width>371</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Black</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: none</string>
-   </property>
-  </widget>
-  <widget class="QScrollArea" name="scrollArea">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>320</y>
-     <width>801</width>
-     <height>411</height>
-    </rect>
-   </property>
-   <property name="widgetResizable">
-    <bool>true</bool>
-   </property>
-   <widget class="QWidget" name="scrollAreaWidgetContents">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>799</width>
-      <height>409</height>
-     </rect>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QPushButton" name="pb_remove">
-   <property name="geometry">
-    <rect>
-     <x>1320</x>
-     <y>30</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Удалить альбом</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pb_perf">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>230</y>
-     <width>381</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Black</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="l_Cover">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>100</y>
-     <width>200</width>
-     <height>200</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>200</width>
-     <height>0</height>
-    </size>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pb_public">
-   <property name="geometry">
-    <rect>
-     <x>1320</x>
-     <y>100</y>
-     <width>121</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Опубликовать</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>190</y>
-     <width>371</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Исполнитель:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>90</y>
-     <width>81</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Альбом</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pb_addSong">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>250</y>
-     <width>101</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Добавить песню</string>
-   </property>
-  </widget>
- </widget>
- <resources/>
- <connections/>
+    <class>AlbumFragment</class>
+    <widget class="QFrame" name="AlbumFragment">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1500</width>
+                <height>750</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Frame</string>
+        </property>
+        <widget class="QPushButton" name="pb_changeName">
+            <property name="geometry">
+                <rect>
+                    <x>670</x>
+                    <y>30</y>
+                    <width>151</width>
+                    <height>41</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Сохранить название</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="pb_changeCover">
+            <property name="geometry">
+                <rect>
+                    <x>480</x>
+                    <y>30</y>
+                    <width>151</width>
+                    <height>41</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Изменить обложку</string>
+            </property>
+        </widget>
+        <widget class="QLineEdit" name="LE_name">
+            <property name="geometry">
+                <rect>
+                    <x>670</x>
+                    <y>130</y>
+                    <width>371</width>
+                    <height>61</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI Black</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="styleSheet">
+                <string notr="true">border: none</string>
+            </property>
+        </widget>
+        <widget class="QScrollArea" name="scrollArea">
+            <property name="geometry">
+                <rect>
+                    <x>320</x>
+                    <y>320</y>
+                    <width>811</width>
+                    <height>411</height>
+                </rect>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>811</width>
+                    <height>411</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>811</width>
+                    <height>411</height>
+                </size>
+            </property>
+            <property name="widgetResizable">
+                <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>809</width>
+                        <height>409</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QPushButton" name="pb_remove">
+            <property name="geometry">
+                <rect>
+                    <x>1320</x>
+                    <y>30</y>
+                    <width>121</width>
+                    <height>61</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Удалить альбом</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="pb_perf">
+            <property name="geometry">
+                <rect>
+                    <x>670</x>
+                    <y>240</y>
+                    <width>371</width>
+                    <height>61</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI Black</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="styleSheet">
+                <string notr="true"/>
+            </property>
+            <property name="text">
+                <string/>
+            </property>
+        </widget>
+        <widget class="QLabel" name="l_Cover">
+            <property name="geometry">
+                <rect>
+                    <x>440</x>
+                    <y>100</y>
+                    <width>200</width>
+                    <height>200</height>
+                </rect>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>200</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="text">
+                <string/>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="pb_public">
+            <property name="geometry">
+                <rect>
+                    <x>1320</x>
+                    <y>100</y>
+                    <width>121</width>
+                    <height>61</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Опубликовать</string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="label">
+            <property name="geometry">
+                <rect>
+                    <x>670</x>
+                    <y>200</y>
+                    <width>371</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Исполнитель:</string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+            <property name="geometry">
+                <rect>
+                    <x>670</x>
+                    <y>90</y>
+                    <width>81</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Альбом</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="pb_addSong">
+            <property name="geometry">
+                <rect>
+                    <x>1270</x>
+                    <y>630</y>
+                    <width>101</width>
+                    <height>61</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>Добавить песню</string>
+            </property>
+        </widget>
+        <widget class="QLineEdit" name="LE_nameSong">
+            <property name="geometry">
+                <rect>
+                    <x>1200</x>
+                    <y>390</y>
+                    <width>231</width>
+                    <height>81</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI Black</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="styleSheet">
+                <string notr="true"/>
+            </property>
+        </widget>
+        <widget class="QScrollArea" name="SA_genre">
+            <property name="geometry">
+                <rect>
+                    <x>1200</x>
+                    <y>520</y>
+                    <width>231</width>
+                    <height>91</height>
+                </rect>
+            </property>
+            <property name="widgetResizable">
+                <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>229</width>
+                        <height>89</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QLabel" name="l_nameSong">
+            <property name="geometry">
+                <rect>
+                    <x>1200</x>
+                    <y>350</y>
+                    <width>221</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI Black</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Название:</string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="l_genre">
+            <property name="geometry">
+                <rect>
+                    <x>1200</x>
+                    <y>480</y>
+                    <width>221</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Segoe UI Black</family>
+                    <pointsize>12</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                </font>
+            </property>
+            <property name="text">
+                <string>Жанр:</string>
+            </property>
+        </widget>
+        <widget class="QLabel" name="l_error">
+            <property name="geometry">
+                <rect>
+                    <x>1200</x>
+                    <y>700</y>
+                    <width>251</width>
+                    <height>31</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string/>
+            </property>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>

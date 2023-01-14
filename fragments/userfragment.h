@@ -3,36 +3,38 @@
 
 #include <QMenu>
 #include <QVBoxLayout>
+#include <QPointer>
 
 #include "../base/basefragment.h"
 #include "../models/usermodel.h"
-#include "../buttons/categorypb.h"
+#include "../buttons/playlistpb.h"
 
-namespace Ui {
-class UserFragment;
+namespace Ui
+{
+    class UserFragment;
 }
 
-class UserFragment : public BaseFragment
+class UserFragment: public BaseFragment
 {
-  Q_OBJECT
+    Q_OBJECT
 
-      public:
-               explicit UserFragment(QWidget *parent = nullptr);
-  ~UserFragment();
+public:
+    explicit UserFragment(QWidget *parent = nullptr);
 
-void setUser(Poco::SharedPtr<BaseModel> model) override;
-void setData(Poco::SharedPtr<DBWorker> model) override;
-void update() override;
+    ~UserFragment();
 
-public slots:
-  void on_playlist_clicked();
+    void setUser(Poco::SharedPtr <BaseModel> model) override;
+
+    void setData(Poco::SharedPtr <DBWorker> model) override;
+
+    void update() override;
 
 private:
-  Ui::UserFragment *ui;
-  Poco::SharedPtr<User> m_mainUser;
-  Poco::SharedPtr<BaseModel> m_ghostUser;
+    Ui::UserFragment *ui;
+    Poco::SharedPtr <User> m_mainUser;
+    Poco::SharedPtr <BaseModel> m_ghostUser;
 
-  std::vector<CategoryPB*> m_playlists;
+    std::vector<PlaylistPB *> m_playlists;
 };
 
 #endif // USERFRAGMENT_H
