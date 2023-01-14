@@ -7,7 +7,7 @@
 #include <QPointer>
 #include <QRadioButton>
 
-#include "../MusicBaseData/Objects/headers/SharedLibrary.h"
+#include "../../MusicBaseData/Objects/headers/SharedLibrary.h"
 #include "../base/basefragment.h"
 #include "../models/usermodel.h"
 #include "../models/performermodel.h"

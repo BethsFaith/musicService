@@ -8,7 +8,7 @@
 
 #include "../base/basefragment.h"
 #include "../models/usermodel.h"
-#include "../MusicBaseData/Objects/headers/Genre.h"
+#include "../../MusicBaseData/Objects/headers/Genre.h"
 #include "../buttons/songpb.h"
 #include "../actions/addsongtoplaylist.h"
 

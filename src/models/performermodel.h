@@ -2,7 +2,7 @@
 #define PERFORMERMODELE_H
 
 #include "../base/basemodel.h"
-#include "../MusicBaseData/Persons/headers/Performer.h"
+#include "../../MusicBaseData/Persons/headers/Performer.h"
 
 class PerformerModel: public BaseModel
 {

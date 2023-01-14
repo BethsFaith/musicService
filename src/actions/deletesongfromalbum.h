@@ -2,7 +2,7 @@
 #define DELETESONGFROMALBUM_H
 
 #include <QAction>
-#include "../MusicBaseData/Objects/headers/Album.h"
+#include "../../MusicBaseData/Objects/headers/Album.h"
 
 class deleteSongFromAlbum: public QAction
 {

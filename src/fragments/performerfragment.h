@@ -6,7 +6,7 @@
 
 #include "../base/basefragment.h"
 #include "../models/usermodel.h"
-#include "../MusicBaseData/Persons/headers/Performer.h"
+#include "../../MusicBaseData/Persons/headers/Performer.h"
 #include "../models/performermodel.h"
 #include "../buttons/albumpb.h"
 #include "../buttons/songpb.h"

@@ -6,7 +6,7 @@
 
 #include "../base/basefragment.h"
 #include "../models/performermodel.h"
-#include "../MusicBaseData/Objects/headers/Album.h"
+#include "../../MusicBaseData/Objects/headers/Album.h"
 
 namespace Ui
 {

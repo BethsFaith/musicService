@@ -2,7 +2,7 @@
 #define DATABASEMODEL_H
 
 #include "../base/basemodel.h"
-#include "../MusicBaseData/General/headers/DataBase.h"
+#include "../../MusicBaseData/General/headers/DataBase.h"
 
 class DataBaseModel: public BaseModel
 {

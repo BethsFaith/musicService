@@ -6,7 +6,7 @@
 #include "../base/basefragment.h"
 #include "../models/usermodel.h"
 #include "../models/performermodel.h"
-#include "../MusicBaseData/Objects/headers/SharedLibrary.h"
+#include "../../MusicBaseData/Objects/headers/SharedLibrary.h"
 #include "../buttons/categorypb.h"
 #include "../buttons/genrepb.h"
 #include <QPushButton>

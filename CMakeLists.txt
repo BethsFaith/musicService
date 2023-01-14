@@ -19,47 +19,47 @@ find_package(Poco REQUIRED Foundation Data DataPostgreSQL)
 find_package(PostgreSQL REQUIRED)
 
 add_subdirectory("./MusicBaseData")
-add_executable(MusicService main.cpp
-        base/basefragment.h base/basefragment.cpp base/basefragment.ui
-        fragments/startfragment.h fragments/startfragment.cpp fragments/startfragment.ui
-        fragments/loginfragment.h fragments/loginfragment.cpp fragments/loginfragment.ui
-        fragments/registrfragment.h fragments/registrfragment.cpp fragments/registrfragment.ui
-        base/basescreensfactory.h
-        common/screenfactory.h common/screenfactory.cpp
-        fragments/splashfragment.h fragments/splashfragment.cpp fragments/splashfragment.ui
-        base/basemodel.h
-        common/navigator.h common/navigator.cpp
-        common/mainwindow.h common/mainwindow.cpp
+add_executable(MusicService src/main.cpp
+        src/base/basefragment.h src/base/basefragment.cpp src/base/basefragment.ui
+        src/fragments/startfragment.h src/fragments/startfragment.cpp src/fragments/startfragment.ui
+        src/fragments/loginfragment.h src/fragments/loginfragment.cpp src/fragments/loginfragment.ui
+        src/fragments/registrfragment.h src/fragments/registrfragment.cpp src/fragments/registrfragment.ui
+        src/base/basescreensfactory.h
+        src/common/screenfactory.h src/common/screenfactory.cpp
+        src/fragments/splashfragment.h src/fragments/splashfragment.cpp src/fragments/splashfragment.ui
+        src/base/basemodel.h
+        src/common/navigator.h src/common/navigator.cpp
+        src/common/mainwindow.h src/common/mainwindow.cpp
         stylecontainer.h
-        models/usermodel.h models/usermodel.cpp
-        models/performermodel.h models/performermodel.cpp
-        models/databasemodel.h models/databasemodel.cpp
-        fragments/userstartfragment.h fragments/userstartfragment.cpp fragments/userstartfragment.ui
-        fragments/performerstartfragment.h fragments/performerstartfragment.cpp fragments/performerstartfragment.ui
-        fragments/categoryfragment.h fragments/categoryfragment.cpp fragments/categoryfragment.ui
-        base/basepicturepb.h base/basepicturepb.cpp base/basepicturepb.ui
-        buttons/categorypb.h buttons/categorypb.cpp
-        fragments/catalogfragment.h fragments/catalogfragment.cpp fragments/catalogfragment.ui
-        buttons/playlistpb.h buttons/playlistpb.cpp
-        buttons/genrepb.h buttons/genrepb.cpp
-        buttons/albumpb.h buttons/albumpb.cpp
-        fragments/searchfragment.h fragments/searchfragment.cpp fragments/searchfragment.ui
-        fragments/playlistfragment.h fragments/playlistfragment.cpp fragments/playlistfragment.ui
-        fragments/performerfragment.h fragments/performerfragment.cpp fragments/performerfragment.ui
-        fragments/albumfragment.h fragments/albumfragment.cpp fragments/albumfragment.ui
-        fragments/userfragment.h fragments/userfragment.cpp fragments/userfragment.ui
-        buttons/songpb.h buttons/songpb.cpp buttons/songpb.ui
-        fragments/userlibraryfragment.h fragments/userlibraryfragment.cpp fragments/userlibraryfragment.ui
-        fragments/userplaylists.h fragments/userplaylists.cpp fragments/userplaylists.ui
-        fragments/userfavourites.h fragments/userfavourites.cpp fragments/userfavourites.ui
-        fragments/createplaylistfragment.h fragments/createplaylistfragment.cpp fragments/createplaylistfragment.ui
-        forms/playlistsform.h forms/playlistsform.cpp forms/playlistsform.ui
-        actions/addsongtoplaylist.h actions/addsongtoplaylist.cpp
-        actions/deletesongfromplaylist.h actions/deletesongfromplaylist.cpp
-        fragments/genrefragment.h fragments/genrefragment.cpp fragments/genrefragment.ui
-        fragments/performertoolsfragment.h fragments/performertoolsfragment.cpp fragments/performertoolsfragment.ui
-        fragments/createalbumfragment.h fragments/createalbumfragment.cpp fragments/createalbumfragment.ui
-        actions/deletesongfromalbum.h actions/deletesongfromalbum.cpp
+        src/models/usermodel.h src/models/usermodel.cpp
+        src/models/performermodel.h src/models/performermodel.cpp
+        src/models/databasemodel.h src/models/databasemodel.cpp
+        src/fragments/userstartfragment.h src/fragments/userstartfragment.cpp src/fragments/userstartfragment.ui
+        src/fragments/performerstartfragment.h src/fragments/performerstartfragment.cpp src/fragments/performerstartfragment.ui
+        src/fragments/categoryfragment.h src/fragments/categoryfragment.cpp src/fragments/categoryfragment.ui
+        src/base/basepicturepb.h src/base/basepicturepb.cpp src/base/basepicturepb.ui
+        src/buttons/categorypb.h src/buttons/categorypb.cpp
+        src/fragments/catalogfragment.h src/fragments/catalogfragment.cpp src/fragments/catalogfragment.ui
+        src/buttons/playlistpb.h src/buttons/playlistpb.cpp
+        src/buttons/genrepb.h src/buttons/genrepb.cpp
+        src/buttons/albumpb.h src/buttons/albumpb.cpp
+        src/fragments/searchfragment.h src/fragments/searchfragment.cpp src/fragments/searchfragment.ui
+        src/fragments/playlistfragment.h src/fragments/playlistfragment.cpp src/fragments/playlistfragment.ui
+        src/fragments/performerfragment.h src/fragments/performerfragment.cpp src/fragments/performerfragment.ui
+        src/fragments/albumfragment.h src/fragments/albumfragment.cpp src/fragments/albumfragment.ui
+        src/fragments/userfragment.h src/fragments/userfragment.cpp src/fragments/userfragment.ui
+        src/buttons/songpb.h src/buttons/songpb.cpp src/buttons/songpb.ui
+        src/fragments/userlibraryfragment.h src/fragments/userlibraryfragment.cpp src/fragments/userlibraryfragment.ui
+        src/fragments/userplaylists.h src/fragments/userplaylists.cpp src/fragments/userplaylists.ui
+        src/fragments/userfavourites.h src/fragments/userfavourites.cpp src/fragments/userfavourites.ui
+        src/fragments/createplaylistfragment.h src/fragments/createplaylistfragment.cpp src/fragments/createplaylistfragment.ui
+        src/forms/playlistsform.h src/forms/playlistsform.cpp src/forms/playlistsform.ui
+        src/actions/addsongtoplaylist.h src/actions/addsongtoplaylist.cpp
+        src/actions/deletesongfromplaylist.h src/actions/deletesongfromplaylist.cpp
+        src/fragments/genrefragment.h src/fragments/genrefragment.cpp src/fragments/genrefragment.ui
+        src/fragments/performertoolsfragment.h src/fragments/performertoolsfragment.cpp src/fragments/performertoolsfragment.ui
+        src/fragments/createalbumfragment.h src/fragments/createalbumfragment.cpp src/fragments/createalbumfragment.ui
+        src/actions/deletesongfromalbum.h src/actions/deletesongfromalbum.cpp
         )
 target_link_libraries(MusicService
         Qt5::Core

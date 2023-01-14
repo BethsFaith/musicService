@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "../base/basefragment.h"
+#include "basefragment.h"
 #include "../models/usermodel.h"
 
 namespace Ui

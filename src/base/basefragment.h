@@ -4,7 +4,7 @@
 #include <QFrame>
 #include <Poco/SharedPtr.h>
 #include "basemodel.h"
-#include "../MusicBaseData/General/headers/DBWorker.h"
+#include "../../MusicBaseData/General/headers/DBWorker.h"
 
 namespace Ui
 {

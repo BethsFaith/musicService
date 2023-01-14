@@ -5,7 +5,7 @@
 
 #include "../base/basefragment.h"
 #include "../models/usermodel.h"
-#include "../MusicBaseData/Objects/headers/Category.h"
+#include "../../MusicBaseData/Objects/headers/Category.h"
 #include "ui_categoryfragment.h"
 #include "../models/performermodel.h"
 #include "../buttons/playlistpb.h"

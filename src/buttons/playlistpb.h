@@ -5,7 +5,7 @@
 #include <QPushButton>
 
 #include "../base/basepicturepb.h"
-#include "../MusicBaseData/Objects/headers/Playlist.h"
+#include "../../MusicBaseData/Objects/headers/Playlist.h"
 
 class PlaylistPB: public BasePicturePB
 {

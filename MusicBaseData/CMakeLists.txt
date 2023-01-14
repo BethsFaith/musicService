@@ -9,8 +9,8 @@ project(MusicBaseData
 find_package(Poco REQUIRED Foundation Data DataPostgreSQL)
 find_package(PostgreSQL REQUIRED)
 
-set(SOURCE_FILES General/DataBase.cpp Objects/Playlist.cpp General/DBWorker.cpp Objects/Song.cpp Persons/Performer.cpp Objects/Album.cpp Persons/User.cpp Objects/UserLibrary.cpp Objects/SharedLibrary.cpp Objects/Category.cpp Objects/Genre.cpp)
-set(HEADER_FILES General/headers/DataBase.h Objects/headers/Playlist.h General/headers/DBWorker.h Objects/headers/Song.h Persons/headers/Performer.h Objects/headers/Album.h Persons/headers/User.h Objects/headers/UserLibrary.h Objects/headers/SharedLibrary.h Objects/headers/Category.h Objects/headers/Genre.h)
+set(SOURCE_FILES src/General/DataBase.cpp src/Objects/Playlist.cpp src/General/DBWorker.cpp src/Objects/Song.cpp src/Persons/Performer.cpp src/Objects/Album.cpp src/Persons/User.cpp src/Objects/UserLibrary.cpp src/Objects/SharedLibrary.cpp src/Objects/Category.cpp src/Objects/Genre.cpp)
+set(HEADER_FILES src/General/headers/DataBase.h src/Objects/headers/Playlist.h src/General/headers/DBWorker.h src/Objects/headers/Song.h src/Persons/headers/Performer.h src/Objects/headers/Album.h src/Persons/headers/User.h src/Objects/headers/UserLibrary.h src/Objects/headers/SharedLibrary.h src/Objects/headers/Category.h src/Objects/headers/Genre.h)
 
 add_library(MusicBaseData STATIC ${HEADER_FILES} ${SOURCE_FILES})
 target_link_libraries(MusicBaseData PUBLIC PostgreSQL::PostgreSQL Poco::Foundation Poco::Data Poco::DataPostgreSQL)

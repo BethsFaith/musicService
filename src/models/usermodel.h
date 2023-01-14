@@ -2,7 +2,7 @@
 #define USERMODULE_H
 
 #include "../base/basemodel.h"
-#include "../MusicBaseData/Persons/headers/User.h"
+#include "../../MusicBaseData/Persons/headers/User.h"
 
 class UserModel: public BaseModel
 {

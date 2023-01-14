@@ -8,7 +8,7 @@
 #include <QWidget>
 
 #include "../base/basefragment.h"
-#include "../MusicBaseData/Objects/headers/SharedLibrary.h"
+#include "../../MusicBaseData/Objects/headers/SharedLibrary.h"
 #include "../buttons/songpb.h"
 #include "../buttons/categorypb.h"
 #include "../buttons/albumpb.h"

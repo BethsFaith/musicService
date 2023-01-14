@@ -2,7 +2,7 @@
 #define ALBUMPB_H
 
 #include "../base/basepicturepb.h"
-#include "../MusicBaseData/Objects/headers/Album.h"
+#include "../../MusicBaseData/Objects/headers/Album.h"
 
 class AlbumPB: public BasePicturePB
 {

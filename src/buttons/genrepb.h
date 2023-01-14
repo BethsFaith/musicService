@@ -2,7 +2,7 @@
 #define GENREPB_H
 
 #include "../base/basepicturepb.h"
-#include "../MusicBaseData/Objects/headers/Genre.h"
+#include "../../MusicBaseData/Objects/headers/Genre.h"
 
 class GenrePB: public BasePicturePB
 {

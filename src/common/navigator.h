@@ -5,7 +5,7 @@
 #include <QLinkedList>
 #include <QStackedWidget>
 #include "../base/basescreensfactory.h"
-#include "../MusicBaseData/General/headers/DBWorker.h"
+#include "../../MusicBaseData/General/headers/DBWorker.h"
 
 class Navigator: public QObject
 {
