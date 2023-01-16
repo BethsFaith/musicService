@@ -14,7 +14,6 @@ find_package(Qt5 COMPONENTS
         REQUIRED
         )
 
-
 find_package(Poco REQUIRED Foundation Data DataPostgreSQL)
 find_package(PostgreSQL REQUIRED)
 
