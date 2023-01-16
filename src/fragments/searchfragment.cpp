@@ -38,7 +38,6 @@ SearchFragment::~SearchFragment() {
 void SearchFragment::setData(Poco::SharedPtr <DBWorker> model) {
     auto db = model.cast<DataBase>();
     m_sharedLib = Poco::makeShared<SharedLibrary>(db);
-    std::cout << m_sharedLib << std::endl;
 }
 
 void SearchFragment::setUser(Poco::SharedPtr <BaseModel> model) {
@@ -117,10 +116,10 @@ void SearchFragment::updateSongs() {
         }
     }
     catch (Poco::Exception &ex) {
-        std::cout << ex.displayText();
+        std::cerr << ex.displayText();
     }
     catch (std::exception &ex) {
-        std::cout << ex.what();
+        std::cerr << ex.what();
     }
 }
 
@@ -157,7 +156,7 @@ void SearchFragment::clickedPerformer() {
                 navigateWithDataAndUser(screens::PERFORMER_TAG, perf, m_baseM);
         }
         catch (Poco::Exception &ex) {
-            std::cout << ex.message() << std::endl;
+            std::cerr << ex.message() << std::endl;
         }
     }
 }
@@ -185,7 +184,7 @@ void SearchFragment::updateAlbums() {
             m_searchableButtons.push_back(albumPB);
         }
     } catch (Poco::Exception &ex) {
-        std::cout << ex.message();
+        std::cerr << ex.message();
     }
 }
 

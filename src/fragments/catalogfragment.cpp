@@ -50,7 +50,6 @@ void CatalogFragment::update() {
         ui->scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         ui->scrollArea->setWidgetResizable(true);
         ui->scrollArea->setWidget(frame);
-        std::cout << m_slib << " m_slib" << std::endl;
         auto categories = m_slib->getAllCategories();
         for (int i{}; i < categories.size(); ++i)
             std::cout << categories[i].getName() << std::endl;

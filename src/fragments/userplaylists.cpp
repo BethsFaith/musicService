@@ -34,7 +34,7 @@ void UserPlaylists::update() {
                 l->addWidget(playlistPB);
             }
         } catch (Poco::Exception &ex) {
-            std::cout << ex.message();
+            std::cerr << ex.message();
         }
     }
 }

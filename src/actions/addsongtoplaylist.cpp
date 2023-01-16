@@ -9,7 +9,6 @@ Poco::SharedPtr <UserModel> addSongToPlaylist::user() {
 }
 
 void addSongToPlaylist::setUser(Poco::SharedPtr <UserModel> newUser) {
-    std::cout << "newUser!" << newUser;
     m_user = newUser;
 }
 
@@ -18,12 +17,10 @@ int addSongToPlaylist::idSong() {
 }
 
 void addSongToPlaylist::setIdSong(int newIdSong) {
-    std::cout << "newSong!" << newIdSong;
     m_idSong = newIdSong;
 }
 
 void addSongToPlaylist::action() {
-    std::cout << "ADD ACTION" << std::endl;
     m_plForm = Poco::makeShared<PlaylistsForm>();
     m_plForm->setUser(m_user);
     m_plForm->setIdSong(m_idSong);

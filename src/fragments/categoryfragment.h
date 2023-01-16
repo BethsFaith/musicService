@@ -34,8 +34,6 @@ private:
     Ui::CategoryFragment *ui;
     Poco::SharedPtr <Category> m_category;
     Poco::SharedPtr <BaseModel> m_user;
-
-    std::vector<PlaylistPB *> m_playlists;
 };
 
 #endif // CATEGORYFRAGMENT_H

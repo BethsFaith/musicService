@@ -26,9 +26,8 @@ public:
 
     void update() override;
 
-private
-    slots:
-            void on_pb_createAlbum_clicked();
+private slots:
+    void on_pb_createAlbum_clicked();
 
 private:
     Ui::PerformerToolsFragment *ui;

@@ -24,12 +24,10 @@ public:
 
     void setPicture(const QString &fileName);
 
-protected:
-    signals:
+protected signals:
             void clicked();
-private
-    slots:
-            void on_pushButton_clicked();
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::BasePicturePB *ui;

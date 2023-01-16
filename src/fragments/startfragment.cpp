@@ -16,6 +16,8 @@ StartFragment::StartFragment(QWidget *parent) :
 
 StartFragment::~StartFragment() {
     delete ui;
+    delete factory;
+    delete navigator;
 }
 
 void StartFragment::setData(Poco::SharedPtr <DBWorker> model) {
@@ -24,10 +26,10 @@ void StartFragment::setData(Poco::SharedPtr <DBWorker> model) {
         navigator->newRootScreen(screens::CATALOG_TAG, m_bm);
     }
     catch (Poco::Exception &ex) {
-        std::cout << ex.displayText();
+        std::cerr << ex.displayText();
     }
     catch (std::exception &ex) {
-        std::cout << ex.what();
+        std::cerr << ex.what();
     }
 }
 

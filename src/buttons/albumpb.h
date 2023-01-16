@@ -14,8 +14,7 @@ public:
 
     const Album &album() const;
 
-public
-slots:
+public slots:
     void onClicked();
 
 private:

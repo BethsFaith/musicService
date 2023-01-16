@@ -10,8 +10,7 @@ public:
     explicit deleteSongFromAlbum(QString string, int idSong, Album &album, QObject *parent = nullptr);
 
     signals:
-            void completed(int
-    idSong);
+    void completed(int idSong);
 private:
     void action();
 

@@ -21,9 +21,8 @@ public:
 
     const Category &category();
 
-public
-    slots:
-            void onClicked();
+public slots:
+    void onClicked();
 
 private:
     Category m_category;

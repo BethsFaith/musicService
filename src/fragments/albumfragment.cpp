@@ -114,14 +114,13 @@ void AlbumFragment::on_pb_perf_clicked() {
     try {
         Poco::SharedPtr <Performer> perf = Poco::makeShared<Performer>(m_album->getPerformerNickname(),
                                                                        m_album->getDB());
-        std::cout << perf << ":perf" << std::endl;
         if (m_user.isNull())
             navigateWithData(screens::PERFORMER_TAG, perf);
         else
             navigateWithDataAndUser(screens::PERFORMER_TAG, perf, m_user);
     }
     catch (Poco::Exception &ex) {
-        std::cout << ex.message() << std::endl;
+        std::cerr << ex.message() << std::endl;
     }
 }
 
@@ -183,7 +182,7 @@ void AlbumFragment::on_pb_changeCover_clicked() {
         }
     }
     catch (Poco::Exception &ex) {
-        std::cout << ex.displayText();
+        std::cerr << ex.displayText();
     }
 }
 
@@ -208,5 +207,4 @@ void AlbumFragment::on_pb_remove_clicked() {
 }
 
 void AlbumFragment::on_song_removed(int idSong) {
-
 }

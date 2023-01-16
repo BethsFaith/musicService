@@ -33,8 +33,6 @@ private:
     Ui::UserFragment *ui;
     Poco::SharedPtr <User> m_mainUser;
     Poco::SharedPtr <BaseModel> m_ghostUser;
-
-    std::vector<PlaylistPB *> m_playlists;
 };
 
 #endif // USERFRAGMENT_H

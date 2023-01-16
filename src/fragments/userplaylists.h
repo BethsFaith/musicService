@@ -34,8 +34,6 @@ private
 private:
     Ui::UserPlaylists *ui;
     Poco::SharedPtr <UserModel> m_user;
-
-    std::vector<PlaylistPB *> m_playlists;
 };
 
 #endif // USERPLAYLISTS_H

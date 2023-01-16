@@ -37,9 +37,6 @@ private:
 
     Poco::SharedPtr <Performer> m_performer;
     Poco::SharedPtr <BaseModel> m_user;
-
-//    std::vector<AlbumPB *> m_albums;
-//    std::vector<SongPB *> m_songs;
 };
 
 #endif // PERFORMERFRAGMENT_H

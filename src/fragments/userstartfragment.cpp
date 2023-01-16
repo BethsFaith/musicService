@@ -17,6 +17,8 @@ UserStartFragment::UserStartFragment(QWidget *parent) :
 
 UserStartFragment::~UserStartFragment() {
     delete ui;
+    delete factory;
+    delete navigator;
 }
 
 void UserStartFragment::setUser(Poco::SharedPtr <BaseModel> model) {

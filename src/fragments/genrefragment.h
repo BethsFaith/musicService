@@ -42,8 +42,6 @@ private:
     Ui::GenreFragment *ui;
     Poco::SharedPtr <BaseModel> m_user;
     Poco::SharedPtr <Genre> m_genre;
-
-    std::vector<SongPB *> m_songs;
 };
 
 #endif // GENREFRAGMENT_H
